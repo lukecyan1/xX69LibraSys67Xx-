@@ -13,52 +13,102 @@ public class Teset_ffrist {
 
     public static void main(String[] args) {
 
+        if (Login.login()) {
+            Menu.showMenu();
+        } else {
+            System.exit(0);
+        }
+
+    }
+}
+    
+
+ class Login {
+
+    public static boolean login() {
+
+        String username = JOptionPane.showInputDialog("Enter Username:");
+        String password = JOptionPane.showInputDialog("Enter Password:");
+
+        if (username.equals("admin") && password.equals("1234")) {
+            JOptionPane.showMessageDialog(null, "Login Successful!");
+            return true;
+        } else {
+            JOptionPane.showMessageDialog(null, "Wrong Username or Password!");
+            return false;
+        }
+    }
+}
+
+
+
+ class Menu {
+
+    public static void showMenu() {
+
+        String[] options = {"Search Book", "Borrow Book", "Return Book", "History", "Exit"};
         int choice;
 
         do {
-            String input = JOptionPane.showInputDialog(
-                "===== MAIN MENU =====\n" +
-                "1. Search Book\n" +
-                "2. Borrow Book\n" +
-                "3. Return Book\n" +
-                "4.History" +
-                "5. Exit\n\n" +
-                "Enter your choice:"
+            choice = JOptionPane.showOptionDialog(
+                null,
+                "Choose an option:",
+                "Main Menu",
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                options,
+                options[0]
             );
 
-            // Handle cancel button
-            if (input == null) {
-                break;
-            }
-
-            choice = Integer.parseInt(input);
-
             switch (choice) {
+                case 0:
+                    BookManager.searchBook();
+                    break;
+
                 case 1:
-                    JOptionPane.showMessageDialog(null, "Search Book selected");
+                    BookManager.borrowBook();
                     break;
 
                 case 2:
-                    JOptionPane.showMessageDialog(null, "Borrow Book selected");
+                    BookManager.returnBook();
                     break;
 
                 case 3:
-                    JOptionPane.showMessageDialog(null, "Return Book selected");
+                    BookManager.showHistory();
                     break;
 
                 case 4:
-                    JOptionPane.showMessageDialog(null, "History");
-                    break;
-                    
-                case 5:
-                    JOptionPane.showMessageDialog(null, "Mampus dari sini");
+                    JOptionPane.showMessageDialog(null, "Exiting system...");
                     break;
 
                 default:
-                    JOptionPane.showMessageDialog(null, "Invalid choice!  67 ");
+                    JOptionPane.showMessageDialog(null, "Invalid choice!");
             }
 
         } while (choice != 4);
     }
 }
 
+
+ class BookManager {
+
+    public static void searchBook() {
+        String book = JOptionPane.showInputDialog("Enter book name to search:");
+        JOptionPane.showMessageDialog(null, "Searching for: " + book);
+    }
+
+    public static void borrowBook() {
+        String book = JOptionPane.showInputDialog("Enter book to borrow:");
+        JOptionPane.showMessageDialog(null, book + " borrowed successfully!");
+    }
+
+    public static void returnBook() {
+        String book = JOptionPane.showInputDialog("Enter book to return:");
+        JOptionPane.showMessageDialog(null, book + " returned successfully!");
+    }
+
+    public static void showHistory() {
+        JOptionPane.showMessageDialog(null, "Showing history (not implemented yet)");
+    }
+}
