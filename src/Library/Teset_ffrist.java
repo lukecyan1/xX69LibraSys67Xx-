@@ -35,19 +35,23 @@ public class Teset_ffrist {
 
             switch (choice) {
                 case 1:
-                    JOptionPane.showMessageDialog(null, "Add Data selected");
+                    JOptionPane.showMessageDialog(null, "Search Book selected");
                     break;
 
                 case 2:
-                    JOptionPane.showMessageDialog(null, "View Data selected");
+                    JOptionPane.showMessageDialog(null, "Borrow Book selected");
                     break;
 
                 case 3:
-                    JOptionPane.showMessageDialog(null, "Delete Data selected");
+                    JOptionPane.showMessageDialog(null, "Return Book selected");
                     break;
 
                 case 4:
-                    JOptionPane.showMessageDialog(null, "Exiting...");
+                    JOptionPane.showMessageDialog(null, "History");
+                    break;
+                    
+                case 5:
+                    JOptionPane.showMessageDialog(null, "Mampus dari sini");
                     break;
 
                 default:
