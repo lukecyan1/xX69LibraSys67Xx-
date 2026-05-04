@@ -18,10 +18,11 @@ public class Teset_ffrist {
         do {
             String input = JOptionPane.showInputDialog(
                 "===== MAIN MENU =====\n" +
-                "1. Add Data\n" +
-                "2. View Data\n" +
-                "3. Delete Data\n" +
-                "4. Exit\n\n" +
+                "1. Search Book\n" +
+                "2. Borrow Book\n" +
+                "3. Return Book\n" +
+                "4.History" +
+                "5. Exit\n\n" +
                 "Enter your choice:"
             );
 
@@ -50,7 +51,7 @@ public class Teset_ffrist {
                     break;
 
                 default:
-                    JOptionPane.showMessageDialog(null, "Invalid choice!");
+                    JOptionPane.showMessageDialog(null, "Invalid choice!  67 ");
             }
 
         } while (choice != 4);
