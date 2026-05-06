@@ -8,6 +8,10 @@ package Library;
  *
  * @author cyanl
  */
+import javax.swing.*;
+import java.awt.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 public class Teset_ffrist {
 
@@ -30,8 +34,12 @@ public class Teset_ffrist {
         String username = JOptionPane.showInputDialog("Enter Username:");
         String password = JOptionPane.showInputDialog("Enter Password:");
 
-        if (username.equals("admin") && password.equals("1234")) {
-            JOptionPane.showMessageDialog(null, "Login Successful!");
+        if (username.equals("admin") && password.equals("1234") || username.equals("user") && password.equals("1234")) {
+            JOptionPane.showMessageDialog(null, "            \"Welcome, Admin!\\n\"\r\n" + //
+                                "            + \"─────────────────────────────\\n\"\r\n" + //
+                                "            + \"xX69LibraSys67Xx  –  Library Management System\\n\\n\"\r\n" + //
+                                "            + \"Team Trio Ensem\",\r\n" + //
+                                "            \"xX69LibraSys67Xx\",");
             return true;
         } else {
             JOptionPane.showMessageDialog(null, "Wrong Username or Password!");
@@ -111,4 +119,8 @@ public class Teset_ffrist {
     public static void showHistory() {
         JOptionPane.showMessageDialog(null, "Showing history (not implemented yet)");
     }
+}
+
+class ListBook {
+    
 }
