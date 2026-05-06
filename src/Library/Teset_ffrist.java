@@ -122,5 +122,8 @@ public class Teset_ffrist {
 }
 
 class ListBook {
-    
+    public static void main(String[] args) {
+        String[] books = {"Book 1", "Book 2", "Book 3"};
+        
+    }
 }
