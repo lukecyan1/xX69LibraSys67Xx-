@@ -1,6 +1,6 @@
 # xX69LibraSys67Xx
 
-A simple Java library management system built with `JOptionPane` GUI dialogs. Made for CBS coursework by **Trio Ensem**.
+A simple Java library management system built with `JOptionPane` GUI dialogs. Made for SPG PBL by **Trio Ensem**.
 
 ---
 
@@ -67,9 +67,10 @@ BookID|Title|Author|Category|Year|Copies
 Example:
 
 ```
-B001|Introduction to Java|John Smith|Programming|2020|3
-B002|Data Structures|Jane Doe|Programming|2019|2
-B003|Database Systems|Ali Hassan|Computer Science|2021|1
+B001|How to do a 67|67 Kid|Brainrot|2018|3
+B002|History of Tung Tung Tung Sahur|Emperor Tung|Brainrot|2020|1
+B003|100 Ways to Die|Double Decker Buss|Oxford|2019|5
+
 ```
 
 > `records.txt` should exist as an empty file before first run.
