@@ -1,0 +1,2 @@
+2
+R001|Jad|B001|Introduction to Java Programming|08-05-2026|22-05-2026|-|0.0|false
